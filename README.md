@@ -1,46 +1,69 @@
 # NebulaTorrent
 
-Modern decentralized torrent search desktop application.
+**NebulaTorrent** is a modern, decentralized torrent search desktop application. It provides a unified, blazing-fast interface to search across multiple torrent indexers simultaneously, inspired by the versatility of qBittorrent's search engine but built with a high-performance modern tech stack.
 
-## Structure
+## ?? Key Features
 
-- `src/frontend`: React + TypeScript + TailwindCSS
-- `src/backend`: Python FastAPI (Dispatcher + Plugins)
-- `src/tauri`: Tauri Desktop Wrapper
+-   **Decentralized Plugin Architecture:** Easily extensible backend that supports multiple torrent indexers (BTDigg, TPB, Nyaa, EZTV, YTS, etc.) via a unified plugin system.
+-   **High-Performance Backend:** Built with **FastAPI** for asynchronous, non-blocking search requests.
+-   **Modern Desktop Experience:** A sleek, responsive UI built with **React**, **TypeScript**, and **Tailwind CSS**, packaged as a lightweight native desktop app using **Tauri**.
+-   **Smart Ranking & Filtering:** Real-time sorting and filtering of results to find exactly what you need.
+-   **Proxy & Security:** Built-in support for global proxies and user-agent rotation to ensure reliable access to indexers.
+-   **Decoupled Design:** The backend API can run independently of the frontend, allowing for headless or remote search setups.
 
-## Getting Started
+## ??? Architecture
 
-### 1. Start the Backend
-```bash
+-   **Frontend (src/frontend):** A Vite-powered React application using Zustand for state management and Tailwind CSS for styling.
+-   **Backend (src/backend):** A Python FastAPI server that manages the SearchDispatcher, handling concurrent plugin execution and result aggregation.
+-   **Plugins (src/backend/plugins):** Modular scrapers and API integrations for various torrent sites.
+-   **Desktop Wrapper (src/tauri):** Tauri integration providing native OS windows and system tray support.
+
+## ??? Tech Stack
+
+-   **Languages:** Python 3.10+, TypeScript, Rust (via Tauri)
+-   **Frameworks:** FastAPI, React 18
+-   **Styling:** Tailwind CSS
+-   **Database:** SQLite (for history and settings)
+-   **Communication:** REST API / HTTPX
+
+## ?? Getting Started
+
+### 1. Prerequisites
+- Python 3.10 or higher
+- Node.js 18 or higher
+- Rust (for building the Tauri desktop app)
+
+### 2. Setup the Backend
+`ash
 cd src/backend
-# Create venv and install dependencies
 python -m venv venv
-source venv/bin/activate # or venv\Scripts\activate on Windows
+# Windows: venv\Scripts\activate | Linux/macOS: source venv/bin/activate
 pip install -r requirements.txt
 python main.py
-```
+`
 
-### 2. Start the Frontend (Web Mode)
-```bash
+### 3. Setup the Frontend
+`ash
 cd src/frontend
 npm install
 npm run dev
-```
+`
 
-### 3. Start Tauri (Desktop Mode)
-*Requires Rust and Cargo*
-```bash
+### 4. Run the Desktop App (Tauri)
+`ash
 cd src/tauri
 npm install
-npx tauri dev
-```
+npm run tauri dev
+`
 
-## Features Implemented
+## ?? Supported Indexers (Plugins)
 
-- **Multi-indexer Search**: Search SolidTorrents and Nyaa simultaneously.
-- **Async Dispatcher**: Parallel plugin execution using `asyncio` and `httpx`.
-- **Plugin Architecture**: Easily add new plugins by inheriting from `BasePlugin`.
-- **Modern UI**: Clean interface built with React and TailwindCSS.
-- **Magnet Support**: Copy magnet links or send directly to qBittorrent.
-- **Sorting & Filtering**: Sort by seeders, size, name, etc. Filter by category.
-- **qBittorrent Integration**: Add torrents directly via WebUI API.
+NebulaTorrent currently ships with support for:
+- **Movies/TV:** TPB, YTS, EZTV, TorrentGalaxy
+- **Anime:** Nyaa
+- **Games:** FitGirl
+- **General:** BTDigg, LimeTorrents, SolidTorrents, GloTorrents, Knaben
+
+## ?? License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
