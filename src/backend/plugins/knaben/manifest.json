@@ -1,0 +1,7 @@
+{
+  "name": "Knaben",
+  "version": "2.0",
+  "base_url": "https://api.knaben.org/v1",
+  "description": "Knaben multi-index database API",
+  "rate_limit": 1
+}

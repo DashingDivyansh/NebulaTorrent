@@ -1,0 +1,6 @@
+{
+  "name": "YTS",
+  "version": "1.0",
+  "base_url": "https://yts.mx",
+  "description": "YTS.mx Movie API"
+}

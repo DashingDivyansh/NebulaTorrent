@@ -1,0 +1,7 @@
+{
+  "name": "EZTV",
+  "version": "1.0",
+  "base_url": "https://eztv.re",
+  "description": "EZTV TV Show Scraper",
+  "rate_limit": 1
+}

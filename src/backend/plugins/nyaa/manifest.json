@@ -1,0 +1,7 @@
+{
+  "name": "Nyaa",
+  "version": "1.0",
+  "base_url": "https://nyaa.si",
+  "supports": ["anime"],
+  "rate_limit": 1
+}

@@ -1,0 +1,6 @@
+{
+  "name": "SolidTorrents",
+  "version": "1.0",
+  "base_url": "https://solidtorrents.to",
+  "supports": ["movies", "games", "tv", "anime", "software", "music", "books"]
+}

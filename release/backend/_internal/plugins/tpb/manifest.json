@@ -1,0 +1,6 @@
+{
+  "name": "ThePirateBay",
+  "version": "1.0",
+  "base_url": "https://apibay.org",
+  "description": "The Pirate Bay API"
+}

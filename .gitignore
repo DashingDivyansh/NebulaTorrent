@@ -1,0 +1,41 @@
+# Logs
+*.log
+backend-dev.err.log
+backend-dev.out.log
+frontend-dev.err.log
+frontend-dev.out.log
+
+# Databases
+*.db
+nebula.db
+test_nebula.db
+
+# Python
+__pycache__/
+venv/
+env/
+.env
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+main.spec
+
+# Node / React
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Tauri
+src/tauri/src-tauri/target/
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
+
+# Agent / Tooling
+graphify-out/
+plan.txt
+project.md
+.gemini/
